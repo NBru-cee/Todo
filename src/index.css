@@ -1,0 +1,334 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+
+      font-family: 'Poppins', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      background-color: #efefef;
+}
+
+#root {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.App {
+      width: 100%;
+      min-height: 100vh;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border: 1px solid #333;
+      box-shadow: 0px 0px 15px gray;
+}
+
+.Header,
+.Footer {
+      width: 100%;
+      background-color: #66d8f5;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+}
+
+.Header h1 {
+      font-size: 1.2rem;
+}
+
+.Header svg {
+      font-size: 2rem;
+}
+
+.Footer {
+      padding: 0.5rem;
+      display: grid;
+      place-content: center;
+      position: static;
+      bottom: 0;
+      left: 0;
+}
+
+.Nav {
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+}
+
+.searchForm {
+      width: 80%;
+      padding: 1rem 0 0 0.75rem;
+}
+
+.searchForm input[type="text"] {
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      min-height: 48px;
+      font-size: 1rem;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      outline: none;
+}
+
+.searchForm label {
+      position: absolute;
+      left: -99999px;
+}
+
+.Nav ul {
+      color: #fff;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+}
+
+.Nav li {
+      padding: 1rem;
+}
+
+.Nav li:hover,
+.Nav li:focus {
+      padding: 1rem;
+}
+
+.Nav li a {
+      color: #fff;
+      text-decoration: none;
+}
+
+.Nav li:hover,
+.Nav li:focus,
+.Nav li:hover a,
+.Nav li:focus a {
+      background-color: #eee;
+      color: #333;
+}
+
+.Nav li:hover a,
+.Nav li:focus a {
+      cursor: pointer;
+}
+
+.Home,
+.NewTask,
+.TaskPage,
+.About,
+.Missing {
+      width: 100%;
+      flex-grow: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      background-color: #fff;
+}
+
+.task {
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid lightgray;
+}
+
+.Home .task a {
+      text-decoration: none;
+}
+
+.Home .task a,
+.Home .task a:visited {
+      color: #000;
+}
+
+.task:first-child {
+      margin-top: 0;
+}
+
+.task:last-child {
+      border-bottom: none;
+}
+
+.taskDate {
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+}
+
+.taskBody {
+      margin: 1rem 0;
+}
+
+.newTaskForm {
+      display: flex;
+      flex-direction: column;
+}
+
+.newTaskForm label {
+      margin-top: 1rem;
+}
+
+.newTaskForm input[type='text'],
+.newTaskForm textarea {
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      min-height: 48px;
+      font-size: 1rem;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      margin-right: 0.25rem;
+      outline: none;
+}
+
+.newTaskForm textarea {
+      height: 100px;
+}
+
+.newTaskForm button {
+      margin: 0.5em 0;
+      background-color: #52b6cf;
+      border: none;
+      color: antiquewhite;
+      font-weight: 500;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 10px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+}
+
+.Missing p,
+.TaskPage p,
+.NewTask p {
+      margin-bottom: 1rem;
+}
+
+.TaskPage button {
+      height: 48px;
+      min-width: 48px;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+}
+
+.deleteButton {
+      background-color: red;
+}
+
+.editButton {
+      background-color: #333;
+}
+
+.statusMsg {
+      margin-top: 2rem;
+}
+
+@media only screen and (min-width: 610px) {
+      html {
+            font-size: 22px;
+      }
+
+      .Header h1 {
+            font-size: 2rem;
+      }
+
+      .Nav {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+      }
+
+      .Nav ul {
+            text-align: right;
+      }
+
+      .Nav li:hover,
+      .Nav li:focus,
+      .Nav li:hover a,
+      .Nav li:focus a {
+            background-color: #eee;
+            color: #333;
+      }
+
+      .searchForm {
+            width: 50%;
+            padding: .5rem 0;
+      }
+
+      .searchForm input[type="text"] {
+            margin-left: 0.5rem;
+      }
+
+      .newTaskForm textarea {
+            height: 200px;
+      }
+}
+
+.backLink {
+      height: 48px;
+      min-width: 48px;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      border: 2px solid #333;
+      background-color: #52b6cf;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.completed {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.25rem;
+      align-items: center;
+      margin: 1rem 0;
+}
+
+
+.completed input {
+      min-width: 1.5rem;
+      min-height: 1.5rem;
+}
+
+
+.check {
+      text-align: end;
+      font-size: 4rem;
+      color: green;
+      margin-left: 4rem;
+      font-weight: 600;
+}
+
+.taskBtns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+
+      .Header svg {
+            font-size: 3rem;
+      }
+
+}

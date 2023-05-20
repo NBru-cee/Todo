@@ -1,0 +1,25 @@
+{
+      "tasks": [
+            {
+                  "id": 1,
+                  "title": "The Unicode and HTML Characters for Checkmarks",
+                  "datatime": "May 20, 2023 3:59:43 PM",
+                  "body": "Remove the U+ and replace it with an ampersand ( & ), pound sign (#), and x . Then type the 2713 in, and then a semi-colon. So, it becomes &#x2713; .",
+                  "completed": false
+            },
+            {
+                  "id": 2,
+                  "title": "What is the HTML entity?",
+                  "datatime": "May 20, 2023 4:00:59 PM",
+                  "body": "What is the HTML entity?\nAn HTML entity is a piece of text (\"string\") that begins with an ampersand ( & ) and ends with a semicolon ( ; ). Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces).",
+                  "completed": false
+            },
+            {
+                  "id": 3,
+                  "title": "React components",
+                  "datatime": "May 20, 2023 3:58:02 PM",
+                  "body": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.",
+                  "completed": false
+            }
+      ]
+}
