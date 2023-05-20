@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Development of ToDo List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+## In this practical assignment, you will build a simple ToDo List app using React. The app should allow users to add, edit, and delete tasks, and mark them as completed. You should use React state and props to manage the app's data and components.
 
-In the project directory, you can run:
+# Requirements
 
-### `npm start`
+## The app should have the following functionalities:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Display a list of tasks, with each task's name and completion status.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Allow users to add new tasks to the list.
 
-### `npm test`
+## Allow users to edit the name of an existing task.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Allow users to delete a task from the list.
 
-### `npm run build`
+## Allow users to mark a task as completed or not completed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Provide a way to filter the list by completion status (e.g., show only completed tasks or show only incomplete tasks).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Provide a way to clear all completed tasks from the list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instructions
 
-### `npm run eject`
+## 1. Build the ToDo List app according to the requirements above.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2. Use React state and props to manage the app's data and components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 3. Use React event handlers to respond to user actions (e.g., adding a new task, editing a task name, etc.).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 4. Use React conditional rendering to show/hide components based on user input (e.g., show only completed tasks or show only incomplete tasks).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 5. Style the app with CSS or any CSS framework (e.g., Bootstrap, etc.).
 
-## Learn More
+## 6. Make sure your code is well-organized and follows best practices for React development.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Evaluation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Your app will be evaluated based on the following criteria:
 
-### Code Splitting
+## 7. Functionality: Does the app meet all the requirements listed above?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 8. Code quality: Is the code well-organized and easy to read? Does it follow best practices for React development?
 
-### Analyzing the Bundle Size
+## 9. Design: Is the app visually appealing and easy to use?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 10. Creativity: Did you add any additional features or functionality beyond the basic requirements?
 
-### Making a Progressive Web App
+## 11. Documentation: Did you provide clear comments and/or documentation for your code?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Submission
 
-### Advanced Configuration
+## When you have finished building your app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Create a new repository on GitHub and push your code to the repository.
 
-### Deployment
+## Add any additional instructions for running your app in a README.md file in a GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Email the link to your repository to your examiner
 
-### `npm run build` fails to minify
+# Website functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## The web has two main pages
+
+## 1. Home page: Where you can see all tasks created with their respective times
+
+## 2. Tasks page: Where you can create new tasks
+
+## For editing the current task, click on its title and then click on the button corresponding to the action you want to perform. Whether editing, deleting or getting back to the homepage
