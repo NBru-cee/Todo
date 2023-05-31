@@ -9,11 +9,9 @@ const EditTask = () => {
       const editTitle = useStoreState((state) => state.editTitle);
       const editBody = useStoreState((state) => state.editBody);
       const editTask = useStoreActions((actions) => actions.editTask);
-      const completed = useStoreState((state) => state.completed);
       const setEditTitle = useStoreActions((actions) => actions.setEditTitle);
       const setEditBody = useStoreActions((actions) => actions.setEditBody);
       const getTaskById = useStoreState((state) => state.getTaskById);
-      const setCompleted = useStoreActions((actions) => actions.setCompleted);
       const task = getTaskById(id);
 
       useEffect(() => {
@@ -30,7 +28,6 @@ const EditTask = () => {
                   title: editTitle,
                   datatime,
                   body: editBody,
-                  completed: completed,
             };
             editTask(updatedTask);
             navigate(`/task/${id}`);
@@ -63,19 +60,6 @@ const EditTask = () => {
                                                 setEditBody(e.target.value)
                                           }
                                     ></textarea>
-                                    <div className="completed">
-                                          <input
-                                                type="checkbox"
-                                                id="completed"
-                                                value={completed}
-                                                onChange={(e) =>
-                                                      setCompleted(
-                                                            e.target.checked
-                                                      )
-                                                }
-                                          />
-                                          <span>Completed</span>
-                                    </div>
                                     <button
                                           type="button"
                                           onClick={() => handleEdit(task.id)}

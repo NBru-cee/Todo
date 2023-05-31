@@ -1,24 +1,32 @@
 import { Link } from "react-router-dom";
-import { useStoreState } from "easy-peasy";
+import React, { useState } from "react";
 
 const Task = ({ task }) => {
-      const completed = useStoreState((state) => state.completed);
+      const [completed, setCompleted] = useState(false);
+      const handleCompleted = (e) => {
+            const task = e.target.checked.parentElement.nextSibling;
+            console.log(task);
+            setCompleted(e.target.checked);
+            localStorage.setItem("completeTask", JSON.stringify(task));
+      };
       return (
-            <article className="task">
+            <article className="task singleTask">
+                  <input
+                        type="checkbox"
+                        value={completed}
+                        onChange={handleCompleted}
+                  />
                   <Link to={`/task/${task.id}`}>
-                        <h2>{task.title}</h2>
-                        <p className="taskDate">
-                              {task.datatime}{" "}
-                              {completed && (
-                                    <span className="check">&#x2713;</span>
-                              )}
+                        <p
+                              className={
+                                    completed ? "completedTitle" : "taskTitle"
+                              }
+                        >
+                              {task.title}
                         </p>
+                        <p className="taskDate">{task.datatime} </p>
                   </Link>
-                  <p className="taskBody">
-                        {task.body.length <= 35
-                              ? task.body
-                              : `${task.body.slice(0, 35)}....`}
-                  </p>
+                  {completed && <span className="check">&#x2713;</span>}
             </article>
       );
 };

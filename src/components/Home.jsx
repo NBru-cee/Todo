@@ -5,6 +5,7 @@ const Home = ({ isLoading, fetchError }) => {
       const searchResult = useStoreState((state) => state.searchResult);
       return (
             <main className="Home">
+                  <h3 className="allTasks">All Tasks</h3>
                   {isLoading && <p className="statusMsg">Loading tasks....</p>}
                   {!isLoading && fetchError && (
                         <p

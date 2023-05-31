@@ -7,7 +7,6 @@ const TaskPage = () => {
       const deleteTask = useStoreActions((actions) => actions.deleteTask);
       const task = getTaskById(id);
       const navigate = useNavigate();
-      const completed = useStoreState((state) => state.completed);
       const handleDelete = (id) => {
             deleteTask(id);
             navigate("/");
@@ -18,41 +17,15 @@ const TaskPage = () => {
                   <article className="task">
                         {task && (
                               <>
-                                    <h2
-                                          style={
-                                                completed
-                                                      ? {
-                                                              color: "green",
-                                                        }
-                                                      : {}
-                                          }
-                                    >
-                                          {task.title}
-                                    </h2>
+                                    <h2>{task.title}</h2>
 
-                                    <p className="taskDate">
-                                          {task.datatime}{" "}
-                                          {completed && (
-                                                <span className="check">
-                                                      &#x2713;
-                                                </span>
-                                          )}
-                                    </p>
+                                    <p className="taskDate">{task.datatime} </p>
 
                                     <p className="taskBody">{task.body}</p>
 
                                     <div className="taskBtns">
                                           <Link to={`/edit/${task.id}`}>
-                                                <button
-                                                      className="editButton"
-                                                      style={
-                                                            completed
-                                                                  ? {
-                                                                          display: "none",
-                                                                    }
-                                                                  : {}
-                                                      }
-                                                >
+                                                <button className="editButton">
                                                       Edit Task
                                                 </button>
                                           </Link>
